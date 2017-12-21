@@ -18,9 +18,9 @@ func create_flare():
 func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 
-func _on_Laser_area_entered( area ):
+func _on_Laser_area_entered(area):
 	if area.is_in_group(colliding_with_group):
-		# area.armor -= 1
+		area.armor -= 1
 		create_flare()
 		utils.remote_call("Camera", "shake", 1, .13)
 		queue_free()   

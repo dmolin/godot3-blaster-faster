@@ -52,7 +52,7 @@ use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 8 )
 
-[sub_resource type="GDScript" id=6]
+[sub_resource type="GDScript" id=4]
 
 script/source = "extends TextureButton
 
@@ -182,7 +182,7 @@ group = null
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 texture_hover = ExtResource( 11 )
-script = SubResource( 6 )
+script = SubResource( 4 )
 
 [node name="Label" type="Label" parent="HUD/BtnMenu"]
 

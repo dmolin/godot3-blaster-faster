@@ -23,8 +23,6 @@ func set_armor(new_value):
 	if armor <= 0:
 		create_explosion() 
 		queue_free()
-		print("enemy is dying")
-		# emit_signal("enemy_dead")
 		get_tree().call_group("HUD", "_on_enemy_dead")	
 
 
@@ -37,8 +35,4 @@ func _on_Enemy_area_entered( area ):
 	if area.is_in_group("ship"):
 		# bring the armor down to zero
 		self.armor = 0
-		
-	if area.is_in_group("bullet"):
-		# take damage
-		self.armor -= 1
 		

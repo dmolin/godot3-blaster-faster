@@ -26,6 +26,4 @@ shape = SubResource( 1 )
 
 rect = Rect2( -3, -6, 6, 12 )
 
-[connection signal="area_entered" from="." to="." method="_on_LaserShip_area_entered"]
-
 

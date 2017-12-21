@@ -63,8 +63,4 @@ func set_armor(new_value):
 func _on_Ship_area_entered( area ):
 	if area.is_in_group("enemy"):
 		self.armor -= 2
-				
-	if area.is_in_group("enemy_bullet"):
-		# take damage
-		self.armor -= 1
-	
+					
