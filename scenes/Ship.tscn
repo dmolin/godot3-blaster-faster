@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Ship.gd" type="Script" id=1]
+[ext_resource path="res://sprites/ship.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.4565, 16.3327 )
+
+[node name="Ship" type="Area2D"]
+
+position = Vector2( 87.0214, 268.714 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="shape" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="cannons" type="Node2D" parent="."]
+
+[node name="left" type="Position2D" parent="cannons"]
+
+position = Vector2( -12, -8 )
+
+[node name="right" type="Position2D" parent="cannons"]
+
+position = Vector2( 12, -8 )
+
+[connection signal="area_entered" from="." to="." method="_on_Ship_area_entered"]
+
+

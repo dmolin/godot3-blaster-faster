@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/EnemyClever.gd" type="Script" id=2]
+[ext_resource path="res://sprites/enemy_clever.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[node name="EnemyClever" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+velocity = Vector2( 50, 50 )
+armor = 6
+
+[node name="sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="shape" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="cannon" type="Position2D" parent="."]
+
+position = Vector2( 0, 16 )
+
+

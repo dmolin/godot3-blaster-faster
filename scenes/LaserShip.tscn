@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Laser.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LaserShip.gd" type="Script" id=2]
+[ext_resource path="res://sprites/laser_ship.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3, 6 )
+
+[node name="LaserShip" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+velocity = Vector2( 0, -350 )
+
+[node name="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="Shape" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier" parent="."]
+
+rect = Rect2( -3, -6, 6, 12 )
+
+[connection signal="area_entered" from="." to="." method="_on_LaserShip_area_entered"]
+
+
