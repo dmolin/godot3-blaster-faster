@@ -1,6 +1,6 @@
 # godot3-blaster-faster
 
-It's a simple 2d space shooter implemented while following Angega Studios tutorials and then ported to Godot 3.
+It's a simple 2d space shooter implemented while following Angega Studios tutorials on YouTube and then ported to Godot 3.
 
 Click on the following image to see a short video of a gameplay session: 
 
